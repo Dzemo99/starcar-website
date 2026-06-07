@@ -898,6 +898,139 @@ button { font-family: inherit; cursor: pointer; }
 :focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-radius: 4px; }
 .sticky-btn:focus-visible { outline-offset: 5px; }
 
+/* ---------- MOBILE OPTIMIERUNGEN (≤600px) ---------- */
+@media (max-width: 600px) {
+
+  /* Navbar & Logo deutlich größer */
+  .navbar { padding: 14px 0; }
+  .navbar.scrolled { padding: 10px 0; }
+  .logo-svg { height: 56px; }
+  .navbar.scrolled .logo-svg { height: 48px; }
+  .nav-toggle { width: 48px; height: 48px; }
+  .nav-toggle span { width: 26px; height: 3px; }
+
+  /* Mobile-Drawer-Menü Punkte größer & besser tappbar */
+  .nav-mobile { padding: 22px 22px 30px; }
+  .nav-mobile a { font-size: 1.08rem; padding: 14px 0; }
+
+  /* HERO — Headline und Begleittexte spürbar größer */
+  .hero { padding: 130px 0 80px; min-height: auto; }
+  .hero h1 { font-size: 2.5rem; line-height: 1.12; }
+  .hero-sub { font-size: 1.12rem; line-height: 1.5; margin-bottom: 28px; }
+  .hero-eyebrow { font-size: .82rem; padding: 8px 14px; }
+  .hero-trust { font-size: 1rem; gap: 10px 8px; }
+
+  /* HERO — 30 Jahre Erfahrung größer + saubere Stapelung */
+  .hero-title-row { gap: 18px; }
+  .hero-experience { padding: 14px 18px; gap: 12px; }
+  .hero-experience-num { font-size: 3.4rem; }
+  .hero-experience-text { font-size: 1rem; letter-spacing: .12em; }
+
+  /* HERO — CTAs voll-breit, gut tappbar */
+  .hero-ctas { gap: 12px; margin-bottom: 32px; }
+  .hero-ctas .btn { flex: 1 1 100%; padding: 18px 24px; font-size: 1.08rem; min-height: 56px; }
+
+  /* Section Headers größer */
+  .section-head h2 { font-size: 2.05rem; }
+  .section-head { margin-bottom: 36px; }
+  .section-sub { font-size: 1.05rem; line-height: 1.55; }
+  .section-eyebrow { font-size: .82rem; padding: 6px 14px; }
+
+  /* Leistungs-Karten lesbarer */
+  .card-image { height: 200px; }
+  .card-body { padding: 22px 22px 26px; }
+  .card h3 { font-size: 1.25rem; }
+  .card p { font-size: 1rem; line-height: 1.55; }
+
+  /* Trust-Strip Items größer */
+  .trust-item strong { font-size: 1.05rem; }
+  .trust-item span { font-size: .95rem; }
+
+  /* Angebote / Preis-Karten */
+  .price-card { padding: 32px 24px; }
+  .price-card h3 { font-size: 1.45rem; }
+  .price-desc { font-size: 1rem; min-height: 0; margin-bottom: 18px; }
+  .price-num { font-size: 3rem; }
+  .price-suffix { font-size: 1.15rem; }
+  .price-cta { padding: 16px 22px; font-size: 1.05rem; min-height: 54px; }
+
+  /* Ergebnisse-Karussell Labels */
+  .ergebnisse-swiper .slide-label { font-size: .92rem; padding: 7px 14px; }
+
+  /* Galerie */
+  .gallery-grid { gap: 12px; grid-auto-rows: 160px; }
+
+  /* Über uns / Features */
+  .ueber-text p { font-size: 1.02rem; line-height: 1.6; }
+  .ueber-features div { font-size: 1.02rem; }
+  .ueber-ctas { gap: 12px; }
+  .ueber-ctas .btn { flex: 1 1 100%; padding: 16px 22px; font-size: 1.05rem; min-height: 54px; }
+  .map-title { font-size: 1.3rem; }
+  .map-addr { font-size: 1rem; }
+
+  /* Termin-Formular gut tappbar */
+  .termin-form { padding: 24px; }
+  .form-field span { font-size: .9rem; }
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    font-size: 1rem;
+    padding: 14px 14px;
+    min-height: 52px;
+  }
+  .form-field textarea { min-height: 120px; }
+  .form-checkbox { font-size: .95rem; }
+  .form-submit { padding: 18px 24px; font-size: 1.1rem; min-height: 58px; }
+  .form-hint { font-size: .9rem; }
+
+  /* Schnellanfrage (Hero-Form) */
+  .quick-inquiry { margin-top: -30px; }
+  .quick-inquiry-text strong { font-size: 1.25rem; }
+  .quick-inquiry-text span { font-size: .92rem; }
+  .quick-form input,
+  .quick-form select {
+    font-size: 1rem; padding: 14px 14px; min-height: 52px;
+  }
+  .quick-form .btn { min-height: 54px; padding: 16px 22px; font-size: 1.05rem; }
+
+  /* Info-Karte (Kontakt) */
+  .info-card { padding: 26px 22px; }
+  .info-row { padding: 16px 0; gap: 16px; }
+  .info-row strong { font-size: 1.05rem; }
+  .info-row span { font-size: .98rem; }
+  .info-icon { width: 46px; height: 46px; }
+
+  /* Sticky-Buttons deutlich größer */
+  .sticky-buttons { right: 16px; bottom: 16px; gap: 16px; }
+  .sticky-btn { width: 64px; height: 64px; }
+  .sticky-btn svg { width: 30px; height: 30px; }
+  .wa-popup { width: calc(100vw - 32px); right: -4px; padding: 18px; }
+  .wa-popup-header strong { font-size: 1.05rem; }
+  .wa-chip { padding: 12px 16px; font-size: .95rem; }
+
+  /* Footer */
+  .footer-col p, .footer-col a { font-size: 1rem; line-height: 1.75; }
+  .footer-col h4 { font-size: .88rem; }
+  .footer-brand .logo-svg { height: 56px; }
+  .footer-bottom { font-size: .92rem; }
+
+  /* Allgemein Fließtext mindestens 16px sicherstellen */
+  body, p { font-size: 1rem; }
+
+  /* Generic Buttons als sichere Tap-Targets */
+  .btn { min-height: 52px; }
+  .btn-lg { min-height: 56px; padding: 17px 28px; font-size: 1.05rem; }
+}
+
+/* Sehr schmale Geräte (≤400px) — etwas kompakter */
+@media (max-width: 400px) {
+  .container { padding: 0 18px; }
+  .hero h1 { font-size: 2.25rem; }
+  .hero-experience-num { font-size: 3rem; }
+  .section-head h2 { font-size: 1.85rem; }
+  .price-num { font-size: 2.7rem; }
+}
+
 /* ---------- Print ---------- */
 @media print {
   .navbar, .sticky-buttons, .hero-scroll, .ergebnisse-swiper, .map-frame iframe { display: none !important; }

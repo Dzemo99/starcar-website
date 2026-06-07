@@ -10,7 +10,11 @@
       "Bash(node server.js)",
       "Bash(grep -iE \"\\\\.\\(jpe?g|png|webp\\)$\")",
       "Bash(git init *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git branch *)",
+      "Bash(git remote *)",
+      "Bash(git push *)"
     ]
   }
 }

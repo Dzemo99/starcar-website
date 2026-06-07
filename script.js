@@ -182,6 +182,46 @@
     });
   }
 
+  // ---------- Schnellanfrage (Quick Form, Formspree) ----------
+  const quickForm = $('#quickForm');
+  const quickSuccess = $('#quickSuccess');
+  const quickError = $('#quickError');
+  if (quickForm) {
+    quickForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const action = quickForm.getAttribute('action');
+      if (!action || action.includes('FORMSPREE_ID')) {
+        alert('Hinweis an Betreiber: Bitte FORMSPREE_ID in index.html durch deine echte Formspree-ID ersetzen.');
+        return;
+      }
+      const submitBtn = quickForm.querySelector('button[type="submit"]');
+      const original = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sende…';
+      if (quickError) quickError.hidden = true;
+      try {
+        const res = await fetch(action, {
+          method: 'POST',
+          body: new FormData(quickForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          quickForm.querySelectorAll('input:not([type=hidden]), select, button[type="submit"]').forEach(el => el.style.display = 'none');
+          quickSuccess.hidden = false;
+          if (window.trackConversion) window.trackConversion('quick_form_submit');
+        } else {
+          quickError.hidden = false;
+          submitBtn.disabled = false;
+          submitBtn.textContent = original;
+        }
+      } catch (err) {
+        quickError.hidden = false;
+        submitBtn.disabled = false;
+        submitBtn.textContent = original;
+      }
+    });
+  }
+
   // ---------- Reveal on Scroll (IntersectionObserver) ----------
   const revealEls = $$('[data-reveal]');
   if (revealEls.length && 'IntersectionObserver' in window) {

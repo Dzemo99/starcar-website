@@ -178,6 +178,49 @@
     </section>
 
     <!-- ============================================================ -->
+    <!-- SCHNELLANFRAGE (direkt unter Hero)                           -->
+    <!-- ============================================================ -->
+    <section class="quick-inquiry" id="schnellanfrage" aria-label="Schnellanfrage">
+      <div class="quick-inquiry-inner">
+        <div class="quick-inquiry-text">
+          <strong>Schnellanfrage</strong>
+          <span>★ Rückruf innerhalb von 24 h</span>
+        </div>
+        <form id="quickForm" class="quick-form"
+              action="https://formspree.io/f/mqeoereo"
+              method="POST">
+          <input type="text" name="name" required placeholder="Dein Name" autocomplete="name" aria-label="Name">
+          <input type="tel" name="telefon" required placeholder="Telefon" autocomplete="tel" aria-label="Telefon">
+          <select name="leistung" required aria-label="Gewünschte Leistung">
+            <option value="">Leistung wählen…</option>
+            <option>Service / Inspektion</option>
+            <option>Reifenservice</option>
+            <option>Ölwechsel</option>
+            <option>TÜV- &amp; AU-Abnahme</option>
+            <option>Chip-Tuning</option>
+            <option>Autofolierung</option>
+            <option>Scheibentönung</option>
+            <option>Smart Repair</option>
+            <option>Nano- / Keramikversiegelung</option>
+            <option>Autoaufbereitung</option>
+            <option>Sonstiges</option>
+          </select>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_subject" value="Schnellanfrage über STAR CAR Website">
+          <input type="hidden" name="formular" value="Schnellanfrage Hero">
+          <button type="submit" class="btn btn-primary">Schnellanfrage senden →</button>
+          <div class="quick-success" id="quickSuccess" hidden>
+            <strong>✓ Danke!</strong>
+            <span>Wir rufen dich zeitnah zurück, um den Termin zu bestätigen.</span>
+          </div>
+          <div class="quick-error" id="quickError" hidden>
+            Etwas ist schiefgelaufen — bitte ruf uns direkt unter <a href="tel:+491771383020" style="color:#fff;text-decoration:underline">0177 138 30 20</a> an.
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
     <!-- VERTRAUENS-STRIP                                             -->
     <!-- ============================================================ -->
     <section class="trust-strip" id="trust">

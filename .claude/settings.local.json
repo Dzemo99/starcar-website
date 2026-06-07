@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx --yes http-server -p 8000 -c-1 --silent)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} — bytes: %{size_download}\\\\n\" http://localhost:8000/)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} \\(styles.css\\)\\\\n\" http://localhost:8000/styles.css)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} \\(script.js\\)\\\\n\" http://localhost:8000/script.js)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} \\(impressum\\)\\\\n\" http://localhost:8000/impressum.html)",
+      "Bash(curl *)",
+      "Bash(node server.js)",
+      "Bash(grep -iE \"\\\\.\\(jpe?g|png|webp\\)$\")",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}
